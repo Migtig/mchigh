@@ -42,7 +42,7 @@ function mchigh_register_custom_post_types(){
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'staff' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-clipboard',
@@ -56,19 +56,19 @@ add_action('init', 'mchigh_register_custom_post_types');
 
 function mchigh_register_taxonomy() {
 
-    //Register Staff Members taxonomy
+    //Register Staff Type taxonomy
     $labels = array(
-        'name'              => _x( 'Staff Members', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Staff Members', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Staff Members' ),
-        'all_items'         => __( 'All Staff Members' ),
-        'parent_item'       => __( 'Parent Staff Members' ),
-        'parent_item_colon' => __( 'Parent Staff Members:' ),
-        'edit_item'         => __( 'Edit Staff Members' ),
-        'update_item'       => __( 'Update Staff Members' ),
-        'add_new_item'      => __( 'Add New Staff Members' ),
-        'new_item_name'     => __( 'New Work Staff Members' ),
-        'menu_name'         => __( 'Staff Members' ),
+        'name'              => _x( 'Staff Type', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Staff Type', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Staff Type' ),
+        'all_items'         => __( 'All Staff Type' ),
+        'parent_item'       => __( 'Parent Staff Type' ),
+        'parent_item_colon' => __( 'Parent Staff Type:' ),
+        'edit_item'         => __( 'Edit Staff Type' ),
+        'update_item'       => __( 'Update Staff Type' ),
+        'add_new_item'      => __( 'Add New Staff Type' ),
+        'new_item_name'     => __( 'New Work Staff Type' ),
+        'menu_name'         => __( 'Staff Type' ),
     );
 
     $args = array(
@@ -78,9 +78,9 @@ function mchigh_register_taxonomy() {
         'show_admin_column' => true,
         'show_in_rest'      => true,
         'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'staff-members' ),
+        'rewrite'           => array( 'slug' => 'staff-type' ),
     );
-    register_taxonomy( 'mchigh-staff-members', array( 'mchigh-staff' ), $args );
+    register_taxonomy( 'mchigh-staff-type', array( 'mchigh-staff' ), $args );
 
 }
 add_action('init', 'mchigh_register_taxonomy');
