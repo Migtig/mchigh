@@ -149,6 +149,17 @@ function mchigh_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'mchigh_scripts' );
 
+// change 'Add title' placeholder text on Staff CPT
+//found on stack overflow https://stackoverflow.com/questions/26258098/change-wordpress-post-title-placeholder
+function mchigh_change_default_title( $title ){
+	$screen = get_current_screen();
+	if ( 'mchigh-staff' == $screen->post_type ){
+	$title = 'Add staff name';
+	}
+	return $title;
+}
+add_filter( 'enter_title_here', 'mchigh_change_default_title' );
+
 /**
  * Implement the Custom Header feature.
  */
@@ -168,6 +179,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * CPT's and taxonomies
+ */
+require get_template_directory() . '/inc/cpt-taxonomy.php';
 
 /**
  * Load Jetpack compatibility file.
