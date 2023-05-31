@@ -202,3 +202,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Change title input for Student posts
+function mchigh_change_title_text( $title ){
+	$screen = get_current_screen();
+  
+	if  ( 'mchigh-student' == $screen->post_type ) {
+		 $title = 'Add student name';
+	}
+  
+	return $title;
+}
+add_filter( 'enter_title_here', 'mchigh_change_title_text' );
