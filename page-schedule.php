@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying the schedule.
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -17,6 +17,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+	<h1><?php the_title(); ?></h1>
+
 		<?php
 
 		if (function_exists('get_field')){
@@ -29,7 +31,8 @@ get_header();
 						<th>Instructor</th>
 					</tr> <?php
 					
-					while ( have_rows('schedule') ) : the_row();
+					while ( have_rows('schedule') ) : 
+						the_row();
 					?> <tr> <?php
 					$date = get_sub_field('date');
 					echo "<td>". $date ."</td>";
