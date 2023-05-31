@@ -46,6 +46,11 @@ function mchigh_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+	// Adds custom image sizes
+	// Custom image size for student portraits
+	add_image_size( 'student-portrait', 200, 300, true );
+
+
 	//Add support for wide and full width in the block editor.
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'responsive-embeds' );

@@ -96,7 +96,7 @@ function mchigh_register_custom_post_types(){
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-groups',
-        'supports'           => array( 'title', 'editor' ),
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
         'template' => array(
             array( 'core/paragraph', array(
                 'placeholder' => 'Add a Short Biography...',
@@ -140,6 +140,32 @@ function mchigh_register_taxonomy() {
         'rewrite'           => array( 'slug' => 'staff-type' ),
     );
     register_taxonomy( 'mchigh-staff-type', array( 'mchigh-staff' ), $args );
+
+    //Register Student Type taxonomy
+    $labels = array(
+        'name'              => _x( 'Student Types', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Student Type', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Student Types' ),
+        'all_items'         => __( 'All Student Types' ),
+        'parent_item'       => __( 'Parent Student Type' ),
+        'parent_item_colon' => __( 'Parent Student Type:' ),
+        'edit_item'         => __( 'Edit Student Type' ),
+        'update_item'       => __( 'Update Student Type' ),
+        'add_new_item'      => __( 'Add New Student Type' ),
+        'new_item_name'     => __( 'New Student Type' ),
+        'menu_name'         => __( 'Student Types' ),
+    );
+
+    $args = array(
+        'hierarchical'      => false,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'show_in_rest'      => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'student-types' ),
+    );
+    register_taxonomy( 'mchigh-student-type', array( 'mchigh-student' ), $args );
 
 }
 add_action('init', 'mchigh_register_taxonomy');
