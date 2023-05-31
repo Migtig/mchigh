@@ -46,6 +46,11 @@ function mchigh_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+	//Add support for wide and full width in the block editor.
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'responsive-embeds' );
+	add_theme_support('align-wide');
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
@@ -84,6 +89,9 @@ function mchigh_setup() {
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	//Add support for image size
+	add_image_size( 'home-thumbnail', 200, 250, true );
 
 	/**
 	 * Add support for core custom logo.
@@ -159,6 +167,8 @@ function mchigh_change_default_title( $title ){
 	return $title;
 }
 add_filter( 'enter_title_here', 'mchigh_change_default_title' );
+
+
 
 /**
  * Implement the Custom Header feature.
