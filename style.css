@@ -48,6 +48,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+h2 {
+	color: #2274A5;
+}
+
+h3 {
+	color: #373F51;
+}
+
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -388,8 +396,8 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: #111;
+	font-family: "Archivo", "Arial", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -427,8 +435,8 @@ address {
 }
 
 pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", courier, monospace;
+	background: #f1f1f1;
+	font-family: "Archivo", "Arial", sans-serif;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
@@ -451,7 +459,7 @@ acronym {
 
 mark,
 ins {
-	background: #fff9c0;
+	background: #f1f1f1;
 	text-decoration: none;
 }
 
@@ -462,11 +470,11 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #ccc;
+	background: #f1f1f1;
 }
 
 hr {
-	background-color: #ccc;
+	background-color: #f1f1f1;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -547,7 +555,7 @@ input[type=submit] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
-	background: #e6e6e6;
+	background: #f1f1f1;
 	color: rgba(0, 0, 0, 0.8);
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
@@ -706,11 +714,6 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }
@@ -724,6 +727,10 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+main {
+	margin: 1rem;
 }
 
 /* Comments
@@ -830,6 +837,121 @@ textarea {
 	display: block;
 }
 
+.site-footer {
+	background-color: #2274A5;
+	padding: 1rem;
+}
+.site-footer .footer-navigation {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.site-footer .site-info {
+	text-align: center;
+}
+.site-footer p,
+.site-footer a,
+.site-footer span.footer-menu,
+.site-footer .site-info,
+.site-footer .footer-menu {
+	color: #f1f1f1;
+}
+.site-footer ul {
+	list-style: none;
+}
+
+.site-header {
+	background-color: #2274A5;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	grid-area: header;
+}
+.site-header .site-title {
+	scale: 0.5;
+}
+.site-header h1 {
+	margin: 0;
+}
+.site-header button {
+	background: none;
+	outline: none;
+	border: none;
+	margin-right: 0;
+	display: inline;
+}
+.site-header button svg {
+	fill: #f1f1f1;
+	scale: 1.2;
+}
+
+.page-id-13 main .staff-types {
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+}
+.page-id-13 main .staff-types .faculty-only {
+	margin-bottom: 2rem;
+}
+.page-id-13 main .staff-types .faculty-only p {
+	margin: 1rem 0;
+}
+.page-id-13 main .staff-types a {
+	background: #2274A5;
+	color: #f1f1f1;
+	padding: 0.5rem;
+	border-radius: 10px;
+	text-decoration: none;
+	max-width: 7.5em;
+}
+.page-id-13 main .staff-types a:hover {
+	background-color: #373F51;
+}
+@media (min-width: 46em) {
+	.page-id-13 main {
+		margin: 0 auto;
+		max-width: 55em;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		padding: 1rem;
+	}
+	.page-id-13 main article {
+		grid-column: 1/3;
+	}
+}
+
+.page-id-11 main tr {
+	display: flex;
+	flex-direction: column;
+	margin: 1.5rem 0;
+	padding: 0.5rem 0 0.5rem 1rem;
+	border-left: 4px solid #373F51;
+}
+.page-id-11 main table {
+	text-align: left;
+}
+@media (min-width: 32em) {
+	.page-id-11 main {
+		max-width: 37em;
+		margin: 0 auto;
+	}
+	.page-id-11 main tr:nth-child(odd) {
+		background-color: lightgrey;
+	}
+	.page-id-11 main th {
+		background-color: #373F51;
+		color: white;
+	}
+	.page-id-11 main tr {
+		display: table-row;
+	}
+	.page-id-11 main th,
+	.page-id-11 main td {
+		padding: 1rem;
+	}
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -915,5 +1037,25 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+.alignwide,
+.alignfull {
+	display: block;
+	width: 100vw;
+	max-width: 100vw;
+	margin: 2rem calc(50% - 50vw);
+}
+
+.alignwide {
+	width: auto;
+}
+
+@media only screen and (min-width: 1300px) {
+	.alignwide {
+		max-width: 1300px;
+		margin-left: -150px;
+		margin-right: -150px;
+	}
 }
 /*# sourceMappingURL=sass/style.css.map */

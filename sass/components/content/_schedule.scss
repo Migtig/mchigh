@@ -1,0 +1,48 @@
+.page-id-11 {
+
+    main {
+
+
+        tr {
+            display: flex;
+            flex-direction: column;
+            margin: 1.5rem 0;
+            padding: 0.5rem 0 0.5rem 1rem;
+            border-left: 4px solid $color__secondary;
+         }
+
+        
+        table {
+            text-align: left;
+        }
+
+        @media(min-width: 32em) {
+            max-width: 37em;
+            margin: 0 auto;
+
+            table, td {
+                //border: 1px solid $color__secondary;
+            }
+
+            tr:nth-child(odd){
+                background-color: lightgrey;
+            }
+
+            th {
+                background-color: $color__secondary;
+                color: white;
+            }
+
+            tr {
+                display: table-row;
+            }
+
+            th,
+            td {
+                padding: 1rem;
+
+            }
+        }
+
+    }
+}

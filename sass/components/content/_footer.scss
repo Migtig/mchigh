@@ -1,0 +1,26 @@
+.site-footer {
+    background-color: $color__primary;
+    padding: 1rem;
+
+    .footer-navigation {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .site-info {
+        text-align: center;
+    }
+
+    p, 
+    a, 
+    span.footer-menu,
+    .site-info,
+    .footer-menu {
+        color: $color__text-white;
+    }
+
+    ul {
+        list-style: none;
+    }
+}

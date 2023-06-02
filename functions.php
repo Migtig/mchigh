@@ -55,6 +55,7 @@ function mchigh_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'mchigh' ),
+			'footer-nav' =>  esc_html__( 'Footer - Navigation', 'mchigh' ),
 		)
 	);
 
@@ -146,6 +147,14 @@ add_action( 'widgets_init', 'mchigh_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mchigh_scripts() {
+	wp_enqueue_style(
+		'mchigh-googlefonts', 
+		// 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:wght@400;700&display=swap',
+		'https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap',
+		array(), //dependences
+		null //version number hack (set to null for google fonts)
+	);
+
 	wp_enqueue_style( 'mchigh-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'mchigh-style', 'rtl', 'replace' );
 
