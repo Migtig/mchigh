@@ -1,8 +1,30 @@
 .page-id-9 {
+
     .entry-header,
+    .news,
     p {
-        max-width: 40em;
+        max-width: 45em;
         margin: 0 auto; 
     }
 
+    .site-title {
+        padding: 0;
+    }
+
+    p {
+        padding: 1rem 0;
+    }
+
+    p:nth-child(1) {
+        padding-top: 0;
+    }
+
+    .news {
+        padding-bottom: 2rem;
+    }
+
+    .alignwide,
+    .alignfull{
+        margin: 0 auto;
+    }
 }
