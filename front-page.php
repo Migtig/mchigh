@@ -28,7 +28,7 @@ get_header();
 				comments_template();
 			endif; ?>
 			
-			<section-news> 
+			<section class="news"> 
 			<h2><?php esc_html_e('News', 'mchigh') ?></h2>
 				<?php
 				$args = array(
@@ -51,7 +51,7 @@ get_header();
 					wp_reset_postdata();
 				}
 				?>
-		</section-news> <?php
+		</section> <?php
 
 		endwhile; // End of the loop.
 		?>

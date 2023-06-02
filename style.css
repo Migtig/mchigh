@@ -861,6 +861,7 @@ main {
 }
 .site-header h1 {
 	max-width: 150px;
+	margin: 5rem;
 }
 .site-header .site-title {
 	scale: 0.5;
@@ -896,8 +897,25 @@ main {
 }
 
 .page-id-9 .entry-header,
+.page-id-9 .news,
 .page-id-9 p {
-	max-width: 40em;
+	max-width: 45em;
+	margin: 0 auto;
+}
+.page-id-9 .site-title {
+	padding: 0;
+}
+.page-id-9 p {
+	padding: 1rem 0;
+}
+.page-id-9 p:nth-child(1) {
+	padding-top: 0;
+}
+.page-id-9 .news {
+	padding-bottom: 2rem;
+}
+.page-id-9 .alignwide,
+.page-id-9 .alignfull {
 	margin: 0 auto;
 }
 
