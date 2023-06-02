@@ -1,0 +1,29 @@
+.site-header {
+    background-color: $color__primary;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    grid-area: header;
+    
+    .site-title {
+        scale: 0.5;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    button {
+        background: none;
+        outline: none;
+        border: none;
+        margin-right: 0;
+        display: inline;
+    
+        svg {
+            fill: $color__text-white;
+            scale: 1.2;
+        }
+    }
+}
