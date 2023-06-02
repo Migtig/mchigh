@@ -35,13 +35,13 @@ get_header();
 		$args = array(
 			'post_type' => 'post',
 			'posts_per_page' => -1,
-		)
+		);
 
 		$query = new WP_Query( $args );
 		if ( $query->have_posts() ) {
 			while ( $query->have_posts() ) {
 				$query->the_post(); ?>
-				<article>
+				<article  data-aos='zoom-in-up'>
 				<h2><?php the_title(); ?></h2>
 				<p><?php the_excerpt(); ?></p>
 				</article>
@@ -50,6 +50,10 @@ get_header();
 			}
 		}
 		?>
+
+		<script>
+			AOS.init();
+		</script>
 
 	</main><!-- #main -->
 

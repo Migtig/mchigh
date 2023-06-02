@@ -163,6 +163,23 @@ function mchigh_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	if ( is_page( 31 ) ) {
+
+		wp_enqueue_style(
+			'animate_on_scroll_styles',
+			get_template_directory_uri() . '/css/aos.css',
+			array(),
+			'2.3.1',
+		);
+
+		wp_enqueue_script(
+			'animate_on_scroll',
+			get_template_directory_uri() . '/js/aos.js',
+			array(),
+			'2.3.1',
+		);
+	}
 }
 add_action( 'wp_enqueue_scripts', 'mchigh_scripts' );
 
