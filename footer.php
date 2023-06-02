@@ -12,6 +12,12 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<div class="footer-menu">
+			<nav id="footer-navigation" class="footer-navigation">
+				<?php the_custom_logo();
+				wp_nav_menu( array ( 'theme_location' => 'footer-nav')) ?>
+			</nav>
+		</div>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mchigh' ) ); ?>">
 				<?php

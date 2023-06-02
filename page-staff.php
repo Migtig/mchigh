@@ -21,7 +21,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'staff' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -65,13 +65,15 @@ get_header();
 							if (get_field('biography') ) { ?>
 								<h3 id='<?php esc_attr( get_the_ID()); ?>'> <?php esc_html(the_title()); ?> </h3>
 								<p><?php the_field( 'biography' ); ?></p> <?php 
-							}
+							} ?>
+							<div class="faculty-only"> <?php
 							if (get_field('courses') ) { ?>
 								<p>Courses: <?php the_field('courses'); ?></p> <?php		
 							}
 							if (get_field('website') ) { ?>
 								<a href='<?php the_field('website') ?>'>Class Website</a> <?php		
-							}
+							} ?>
+							</div> <?php
 						}
 					}
 					wp_reset_postdata();
@@ -85,5 +87,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
