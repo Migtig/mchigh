@@ -1,10 +1,12 @@
 .site-header {
     background-color: $color__primary;
     padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    grid-area: header;
+    padding-bottom: 0;
+    position: relative;
+
+    h1 {
+        max-width: 150px;
+    }
     
     .site-title {
         scale: 0.5;
@@ -19,11 +21,29 @@
         outline: none;
         border: none;
         margin-right: 0;
-        display: inline;
+        position: absolute;
+        top: 10px;
+        right: 0px;
     
         svg {
             fill: $color__text-white;
             scale: 1.2;
+        }
+    }
+
+    @media(min-width: 37.5em) {
+        //display: grid;
+        display: flex;
+        //justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+
+        .main-navigation {  
+            display: inline;
+            justify-content: stretch;
+
+            .nav-menu{
+                justify-content: flex-end;
+            }
         }
     }
 }

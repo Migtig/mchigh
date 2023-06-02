@@ -1,12 +1,15 @@
 .main-navigation {
-	display: block;
+
+	//display: block;
 	width: 100%;
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		height: 0;
+		overflow: hidden;
+		transition: height .5s ease;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -60,6 +63,16 @@
 	a {
 		display: block;
 		text-decoration: none;
+		text-align: right;
+		margin-right: 1rem;
+		margin: 1rem;
+		color: $color__text-white;
+		font-weight: 700;
+	}
+
+	a:hover {
+		background-color: $color__secondary;
+		font-weight: 700;
 	}
 
 	.current_page_item > a,
@@ -70,19 +83,26 @@
 }
 
 /* Small menu. */
-.menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	height: 15rem;
 }
 
 @media screen and (min-width: 37.5em) {
 
-	.menu-toggle {
-		display: none;
+	.main-navigation {
+		overflow: visible;
+        height: 3em;
 	}
 
 	.main-navigation ul {
+		overflow: visible;
+        height: 3em;
 		display: flex;
+	}
+
+	.menu-toggle,
+	svg {
+		display: none;
 	}
 }
 
