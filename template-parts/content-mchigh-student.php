@@ -29,7 +29,18 @@
 
 		?>
 	</div><!-- .entry-content -->
+	
+	<?php
+	if ( is_singular() ) {
 
+	?>
+	<div class="related-students">
+		<h3>Other Students:</h3>
+		<p><a href="#">The Prodigy</a></p>
+	</div>
+	<?php
+	}
+	?>
 	<footer class="entry-footer">
 		<?php mchigh_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
