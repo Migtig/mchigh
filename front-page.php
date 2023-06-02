@@ -26,12 +26,9 @@ get_header();
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		<section-news>
+			endif; ?>
+			
+			<section-news> 
 			<h2><?php esc_html_e('News', 'mchigh') ?></h2>
 				<?php
 				$args = array(
@@ -54,7 +51,12 @@ get_header();
 					wp_reset_postdata();
 				}
 				?>
-		</section-news>
+		</section-news> <?php
+
+		endwhile; // End of the loop.
+		?>
+
+		
 
 	</main><!-- #main -->
 
