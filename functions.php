@@ -46,6 +46,7 @@ function mchigh_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+
 	//Add support for wide and full width in the block editor.
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'responsive-embeds' );
@@ -93,6 +94,7 @@ function mchigh_setup() {
 
 	//Add support for image size
 	add_image_size( 'home-thumbnail', 200, 250, true );
+	add_image_size( 'student-portrait', 200, 300, true );
 
 	/**
 	 * Add support for core custom logo.
@@ -228,3 +230,33 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Change title input for Student posts
+function mchigh_change_title_text( $title ){
+	$screen = get_current_screen();
+  
+	if  ( 'mchigh-student' == $screen->post_type ) {
+		 $title = 'Add student name';
+	}
+  
+	return $title;
+}
+add_filter( 'enter_title_here', 'mchigh_change_title_text' );
+
+
+function mchigh_excerpt_length( $length ) {
+	if ( is_page( 33 ) ) {
+		return 25;
+	}
+	else {
+		return $length;
+	}
+}
+add_filter( 'excerpt_length', 'mchigh_excerpt_length', 999 );
+
+function mchigh_excerpt_more( $more ) {
+	if ( is_page( 33 ) ) {
+		$more = '... <a class="read-more" href="' . esc_url( get_permalink() ) . '">' . __( "Read more about this student...", "mchigh" ) . '</a>';
+	}
+	return $more;
+}
+add_filter( 'excerpt_more', 'mchigh_excerpt_more' );
