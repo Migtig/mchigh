@@ -33,12 +33,49 @@
 	<?php
 	if ( is_singular() ) {
 
-	?>
-	<div class="related-students">
-		<h3>Other Students:</h3>
-		<p><a href="#">The Prodigy</a></p>
-	</div>
-	<?php
+		$terms = get_the_terms( get_the_ID(), 'mchigh-student-type');
+		$stuID = get_the_ID();
+		foreach( $terms as $term) {
+
+			$args = array(
+				'post_type'      => 'mchigh-student',
+				'posts_per_page' => -1,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'mchigh-student-type',
+						'field'    => 'slug',
+						'terms'    => $term->slug,
+					)
+				),
+			);
+
+			$query = new WP_Query( $args );
+			if ( $query->have_posts() ) {
+				?>
+				<div class="related-students">
+					<h3>Other <?php echo( esc_html( $term->name ) ); ?>s:</h3>
+					<?php
+					while( $query->have_posts() ) {
+						$query->the_post();
+
+						if ( $stuID != get_the_ID() ) {
+							?>
+							<p><a href="<?php esc_attr( the_permalink() ); ?>"><?php esc_html( the_title() ); ?></a></p>
+							<?php
+						}
+
+					}
+					wp_reset_postdata();
+					?>
+				</div>
+				<?php
+			}
+		}
+		
+
+		?>
+		
+		<?php
 	}
 	?>
 	<footer class="entry-footer">
