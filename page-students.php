@@ -47,8 +47,8 @@ get_header();
 				?>
 				<article>
 					<a href="<?php the_permalink(); ?>"></a>
-					<h3><?php the_title(); ?></h3>
-					<?php the_post_thumbnail( 'student-portrait' ); ?>
+					<h2><?php the_title(); ?></h2>
+					<?php the_post_thumbnail( 'student-landscape' ); ?>
 					<p><?php the_excerpt(); ?></p>
 					<p>Specialty: <?php 
 					$terms = get_the_terms( get_the_ID(), 'mchigh-student-type');

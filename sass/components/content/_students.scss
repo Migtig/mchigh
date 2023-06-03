@@ -1,0 +1,39 @@
+.page-id-33 {
+
+    h2 {
+        color: $color__text-black;
+    }
+
+    .site-main {
+        max-width: 70em;
+        margin: 0 auto;
+
+        .students-all {
+
+            article {
+                margin: 0 2rem;
+                max-width: 320px;
+    
+                img {
+                    width: 100%;
+                }
+    
+                p {
+                    margin: 1rem 0;
+                }
+     
+            }
+
+            @media (min-width: 512px) {
+                display: flex;
+                flex-wrap: wrap;
+
+                article {
+                    margin: 0 1rem;
+                }
+            }
+        }
+
+
+    }
+}

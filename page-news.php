@@ -41,7 +41,7 @@ get_header();
 		if ( $query->have_posts() ) {
 			while ( $query->have_posts() ) {
 				$query->the_post(); ?>
-				<article  data-aos='zoom-in-up'>
+				<article class data-aos='zoom-in-up'>
 				<h2><?php the_title(); ?></h2>
 				<p><?php the_excerpt(); ?></p>
 				</article>
