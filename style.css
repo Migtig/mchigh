@@ -650,6 +650,8 @@ textarea {
 	top: 100%;
 	left: -999em;
 	z-index: 99999;
+	background-color: #2274A5;
+	display: flex;
 }
 .main-navigation ul ul ul {
 	left: -999em;
@@ -665,6 +667,7 @@ textarea {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
+	right: 0;
 }
 .main-navigation li {
 	position: relative;
@@ -679,7 +682,7 @@ textarea {
 	font-weight: 700;
 }
 .main-navigation a:hover {
-	background-color: #373F51;
+	background-color: #2274A5;
 	font-weight: 700;
 }
 /* Small menu. */

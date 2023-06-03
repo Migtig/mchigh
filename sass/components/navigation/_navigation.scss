@@ -18,7 +18,9 @@
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
-
+			background-color: $color__primary;
+			display: flex;
+			
 			ul {
 				left: -999em;
 				top: 0;
@@ -49,6 +51,7 @@
 		li:hover > ul,
 		li.focus > ul {
 			left: auto;
+			right: 0;
 		}
 	}
 
@@ -71,7 +74,7 @@
 	}
 
 	a:hover {
-		background-color: $color__secondary;
+		background-color: $color__primary;
 		font-weight: 700;
 	}
 
