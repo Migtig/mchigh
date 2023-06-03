@@ -534,7 +534,7 @@ a {
 	color: #4169e1;
 }
 a:visited {
-	color: #800080;
+	color: #4169e1;
 }
 a:hover, a:focus, a:active {
 	color: #191970;
@@ -1013,6 +1013,41 @@ main {
 	.site-footer img {
 		max-width: 200px;
 		margin: 1rem 0;
+	}
+}
+
+.page-id-31 .site-main {
+	max-width: 45em;
+	margin: 0 auto;
+}
+.page-id-31 .site-main article {
+	margin-bottom: 4rem;
+}
+.page-id-31 .site-main article:nth-child(1) {
+	margin-bottom: 1rem;
+}
+
+.page-id-33 h2 {
+	color: #242325;
+}
+.page-id-33 .site-main {
+	max-width: 65em;
+	margin: 0 auto;
+}
+.page-id-33 .site-main .students-all article {
+	margin: 0 2rem;
+	max-width: 320px;
+}
+.page-id-33 .site-main .students-all article img {
+	width: 100%;
+}
+.page-id-33 .site-main .students-all article p {
+	margin: 1rem 0;
+}
+@media (min-width: 512px) {
+	.page-id-33 .site-main .students-all {
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 

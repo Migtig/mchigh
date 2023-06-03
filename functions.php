@@ -95,6 +95,7 @@ function mchigh_setup() {
 	//Add support for image size
 	add_image_size( 'home-thumbnail', 200, 250, true );
 	add_image_size( 'student-portrait', 200, 300, true );
+	add_image_size( 'student-landscape', 300, 200, array( 'center', 'top' ));
 
 	/**
 	 * Add support for core custom logo.
