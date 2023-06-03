@@ -5,7 +5,7 @@
     }
 
     .site-main {
-        max-width: 65em;
+        max-width: 70em;
         margin: 0 auto;
 
         .students-all {
@@ -27,6 +27,10 @@
             @media (min-width: 512px) {
                 display: flex;
                 flex-wrap: wrap;
+
+                article {
+                    margin: 0 1rem;
+                }
             }
         }
 

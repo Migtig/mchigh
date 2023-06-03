@@ -1031,7 +1031,7 @@ main {
 	color: #242325;
 }
 .page-id-33 .site-main {
-	max-width: 65em;
+	max-width: 70em;
 	margin: 0 auto;
 }
 .page-id-33 .site-main .students-all article {
@@ -1048,6 +1048,144 @@ main {
 	.page-id-33 .site-main .students-all {
 		display: flex;
 		flex-wrap: wrap;
+	}
+	.page-id-33 .site-main .students-all article {
+		margin: 0 1rem;
+	}
+}
+
+.tax-mchigh-student-type h2 {
+	color: #242325;
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+}
+.tax-mchigh-student-type .site-main {
+	max-width: 70em;
+	margin: 0 auto;
+}
+.tax-mchigh-student-type .site-main article {
+	margin: 0 2rem 4rem;
+}
+.tax-mchigh-student-type .site-main article img {
+	width: 90%;
+	max-width: 300px;
+	display: block;
+	margin: 0 auto;
+}
+.tax-mchigh-student-type .site-main article p {
+	margin: 1rem 0;
+}
+.tax-mchigh-student-type .site-main article .wp-block-button {
+	max-width: -moz-fit-content;
+	max-width: fit-content;
+	display: block;
+	margin: 0 auto;
+}
+@media (min-width: 512px) {
+	.tax-mchigh-student-type .site-main {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.tax-mchigh-student-type .site-main article {
+		margin: 0 auto 2rem;
+		max-width: 80%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: "stuname stuname stuname" "stuimage stucontent stucontent" "stuimage stucontent stucontent";
+	}
+	.tax-mchigh-student-type .site-main article header {
+		grid-area: stuname;
+	}
+	.tax-mchigh-student-type .site-main article header h2 {
+		margin: 0;
+	}
+}
+@media (min-width: 512px) and (min-width: 820px) {
+	.tax-mchigh-student-type .site-main article header h2 {
+		margin: 0 0 1rem 1rem;
+	}
+}
+@media (min-width: 512px) {
+	.tax-mchigh-student-type .site-main article img {
+		grid-area: stuimage;
+		margin: auto;
+		width: 100%;
+	}
+	.tax-mchigh-student-type .site-main article .entry-content {
+		grid-area: stucontent;
+		margin: 0;
+	}
+	.tax-mchigh-student-type .site-main article .entry-content p {
+		margin: 0 2rem 2rem;
+	}
+}
+@media (min-width: 512px) and (min-width: 820px) {
+	.tax-mchigh-student-type .site-main article .entry-content p {
+		margin: 1rem 2rem 4rem;
+		font-size: 1.1rem;
+	}
+}
+
+.single-mchigh-student .site-main article {
+	margin: 0 2rem 4rem;
+}
+.single-mchigh-student .site-main article img {
+	width: 90%;
+	max-width: 300px;
+	display: block;
+	margin: 0 auto;
+}
+.single-mchigh-student .site-main article p {
+	margin: 1rem 0;
+}
+.single-mchigh-student .site-main article .wp-block-button {
+	max-width: -moz-fit-content;
+	max-width: fit-content;
+	display: block;
+	margin: 0 auto;
+}
+@media (min-width: 512px) {
+	.single-mchigh-student .site-main {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.single-mchigh-student .site-main article {
+		margin: 0 auto 2rem;
+		max-width: 80%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: "stuname stuname stuname" "stuimage stucontent stucontent" "stuimage stucontent stucontent";
+	}
+	.single-mchigh-student .site-main article header {
+		grid-area: stuname;
+	}
+	.single-mchigh-student .site-main article header h2 {
+		margin: 0;
+	}
+}
+@media (min-width: 512px) and (min-width: 820px) {
+	.single-mchigh-student .site-main article header h2 {
+		margin: 0 0 1rem 1rem;
+	}
+}
+@media (min-width: 512px) {
+	.single-mchigh-student .site-main article img {
+		grid-area: stuimage;
+		margin: auto;
+		width: 100%;
+	}
+	.single-mchigh-student .site-main article .entry-content {
+		grid-area: stucontent;
+		margin: 0;
+	}
+	.single-mchigh-student .site-main article .entry-content p {
+		margin: 0 2rem 2rem;
+	}
+}
+@media (min-width: 512px) and (min-width: 820px) {
+	.single-mchigh-student .site-main article .entry-content p {
+		margin: 1rem 2rem 4rem;
+		font-size: 1.1rem;
 	}
 }
 
